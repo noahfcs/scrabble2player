@@ -9,25 +9,13 @@ namespace Scrabble2Joueurs
     /// <summary>
     /// Classe Joueur
     /// </summary>
-    public class Joueur
+    public Joueur(string unNom)
     {
-        #region attributs privés
-        private string nom;             // nom du joueur 
-        private List<string> lesMots;   // liste des mots proposés par le joueur
-        private int totalPoints;        // nombre total de points du joueur
-        #endregion
+        this.nom = unNom;
 
-        #region constructeur
-        /// <summary>
-        /// Constructeur de la classe Joueur
-        /// Initialise l'attribut lesMots à une liste vide et l'attribut totalPoints à zéro
-        /// </summary>
-        /// <param name="unNom">nom du joueur</param>
-        public Joueur(string unNom)
-        {
-            //TODO
-        }
-        #endregion
+    }
+     
+
 
         #region méthodes
         /// <summary>
