@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Scrabble2Joueurs
 {
@@ -60,6 +56,16 @@ namespace Scrabble2Joueurs
                 pts = pts + PointsLettre(lettre);
             }
             return pts;
+        }
+
+        private static Random rand = new Random();
+        /*
+        Retourne une lettre de l'alphabet au hasard.
+        */
+        public static char LettreAleatoire()
+        {
+            string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            return alphabet[rand.Next(0, 26)];
         }
     }
 }
