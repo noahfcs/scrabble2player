@@ -1,4 +1,5 @@
 CREATE DATABASE scrabble COLLATE 'utf8mb4_roman_ci';
+CREATE USER IF NOT EXISTS 'fuchs_td4'@'localhost' IDENTIFIED BY 'Soleil@';
 GRANT ALL PRIVILEGES ON scrabble.*TO 'fuchs_td4'@'localhost';
 
 USE scrabble;
