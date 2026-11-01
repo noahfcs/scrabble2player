@@ -10,7 +10,7 @@ namespace Scrabble2Joueurs
         /// <returns>objet MySqlConnection</returns>
         public static MySqlConnection GetConnexion()
         {
-            string chaineConnex = "server=localhost; user id=fuchs; password=VOTRE_MOT_DE_PASSE; database=scrabble";
+            string chaineConnex = "server=localhost; user id=fuchs; password=Soleil@; database=scrabble";
             MySqlConnection connexion = new MySqlConnection(chaineConnex);
             return connexion;
         }

@@ -32,7 +32,6 @@ namespace Scrabble2Joueurs
         /// </summary>
         private void ChargerHistorique()
         {
-            // liaison (binding) du DataGrid à la liste des parties
             dgHistorique.ItemsSource = PartieDao.GetLesParties();
         }
 
@@ -164,6 +163,13 @@ namespace Scrabble2Joueurs
             string mot = "";
             foreach (int i in selection)
                 mot += chevalet[i];
+
+            // vérification : le mot doit figurer dans le dictionnaire du Scrabble
+            if (!App.LeDictionnaire.ExisteMot(mot))
+            {
+                MessageBox.Show("Le mot \"" + mot + "\" n'existe pas dans le dictionnaire.");
+                return;
+            }
 
             int points = Utilitaire.PointsMot(mot);
 
